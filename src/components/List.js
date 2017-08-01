@@ -19,7 +19,7 @@ export default class List extends Component {
       })
       .catch(err => {
         console.log(err);
-        this.setState({err: "Something went wrong :("});
+        this.setState({err: "Something went wrong."});
       })
   }
 

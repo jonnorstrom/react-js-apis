@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../stylesheets/App.css';
 import List from './List';
 
 class App extends Component {
