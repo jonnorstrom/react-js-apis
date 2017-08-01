@@ -9,12 +9,12 @@ export default class List extends Component {
       err: ""
     }
   }
-  
+
   componentDidMount() {
     axios.get('https://jsonplaceholder.typicode.com/users')
       .then(res => {
         this.setState({
-          beers: res.data
+          list: res.data
         })
       })
       .catch(err => {
@@ -22,10 +22,10 @@ export default class List extends Component {
         this.setState({err: "Something went wrong :("});
       })
   }
-  
+
   renderItems() {
     const {list} = this.state
-    
+
     return list.map((item, index) => {
       return(
         <a key={index} className="col-md-4 list-group-item col-md-offset-4" style={{marginBottom: "10px"}}>
@@ -37,7 +37,7 @@ export default class List extends Component {
       )
     })
   }
-  
+
   renderErr() {
     if (this.state.err) {
       return(
@@ -47,7 +47,7 @@ export default class List extends Component {
       )
     }
   }
-  
+
   render() {
     return(
       <div className="list-group">
