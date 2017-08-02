@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import List from './List';
+import { connect } from 'react-redux';
 
 class App extends Component {
   render() {
@@ -12,9 +14,14 @@ class App extends Component {
             A quick rundown on API handling in React.
           </p>
         </div>
+        <List />
       </div>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {}
+}
+
+export default connect(mapStateToProps, null)(App);
