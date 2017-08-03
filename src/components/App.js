@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import List from './List';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
             A quick rundown on API handling in React.
           </p>
         </div>
+        <List />
       </div>
     );
   }
